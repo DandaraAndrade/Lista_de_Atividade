@@ -1,0 +1,26 @@
+import math
+
+chegada_hora = int(input("Digite a hora de chegada: "))
+chegada_minuto = int(input("Digite os minutos de chegada: "))
+partida_hora = int(input("Digite a hora de partida: "))
+partida_minuto = int(input("Digite os minutos de partida: "))
+
+def calcular_tarifa(chegada, partida):
+    chegada_minutos = chegada[0] * 60 + chegada[1]
+    partida_minutos = partida[0] * 60 + partida[1]
+
+    diferenca_minutos = partida_minutos - chegada_minutos
+
+    num_horas = math.ceil(diferenca_minutos / 60)
+
+    if num_horas <= 2:
+        preco = num_horas * 1.00
+    elif num_horas <= 4:
+        preco = 2 * 1.00 + (num_horas - 2) * 1.40
+    else:
+        preco = 2 * 1.00 + 2 * 1.40 + (num_horas - 4) * 2.00
+
+    return preco
+
+preco = calcular_tarifa((chegada_hora, chegada_minuto), (partida_hora, partida_minuto))
+print(f"O preço cobrado pelo estacionamento é de R$ {preco:.2f}.")

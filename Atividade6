@@ -1,0 +1,13 @@
+numero1 = int(input("Digite o primeiro número inteiro: "))
+numero2 = int(input("Digite o segundo número inteiro: "))
+
+if numero1 > numero2:
+    print("O maior número é:", numero1)
+    diferenca = numero1 - numero2
+    print("A diferença entre os números é de:", diferenca)
+elif numero2 > numero1:
+    print("O maior número é:", numero2)
+    diferenca = numero2 - numero1
+    print("A diferença entre os números é de:", diferenca)
+else:
+    print("Os números são iguais. Não há diferença.")

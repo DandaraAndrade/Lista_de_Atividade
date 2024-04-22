@@ -1,0 +1,14 @@
+trabalho_lab = float(input("Digite a nota do trabalho de laboratório (0 a 10): "))
+avaliacao_semestral = float(input("Digite a nota da avaliação semestral (0 a 10): "))
+exame_final = float(input("Digite a nota do exame final (0 a 10): "))
+
+media = (trabalho_lab * 2 + avaliacao_semestral * 3 + exame_final * 5) / (2 + 3 + 5)
+
+if 0 <= media <= 2.9:
+    situacao = "reprovado"
+elif 3 <= media <= 4.9:
+    situacao = "em recuperação"
+else:
+    situacao = "aprovado"
+
+print(f"A média do aluno é {media}. O que índica que ele está {situacao}.")

@@ -1,0 +1,16 @@
+A = float(input("Digite o valor do lado A: "))
+B = float(input("Digite o valor do lado B: "))
+C = float(input("Digite o valor do lado C: "))
+
+def tipo_triangulo(A, B, C):
+    if A + B <= C or A + C <= B or B + C <= A:
+        return "Não é um triângulo"
+    
+    if A == B == C:
+        return "Triângulo equilátero"
+    elif A == B or A == C or B == C:
+        return "Triângulo isósceles"
+    else:
+        return "Triângulo escaleno"
+
+print(f"O triângulo corresponde á um {tipo_triangulo(A, B, C)}")

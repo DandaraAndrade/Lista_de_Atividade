@@ -1,0 +1,15 @@
+numero = float(input("Dígite um número inteiro maior que zero:"))
+
+def soma_algarismos(numero):
+    soma = 0
+    while numero > 0:
+        ultimo_algarismo = numero % 10
+        soma = soma + ultimo_algarismo
+        numero = numero // 10
+    return soma
+
+if numero <= 0:
+        print("Número inválido")
+else:
+        resultado = soma_algarismos(numero)
+        print("A soma dos algarismos do número é:", resultado)

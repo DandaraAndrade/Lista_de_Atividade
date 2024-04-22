@@ -1,0 +1,22 @@
+def calcular_preco_final(valor, estado):
+    taxas_imposto = {
+        "MG": 0.07,
+        "SP": 0.12,
+        "RJ": 0.15,
+        "MS": 0.08
+    }
+
+    if estado in taxas_imposto:
+        preco_final = valor * (1 + taxas_imposto[estado])
+        return preco_final
+    else:
+        return "Erro: Estado inválido."
+
+valor = float(input("Digite o valor do produto: "))
+estado = input("Digite o estado destino do produto (sigla): ").upper()
+
+resultado = calcular_preco_final(valor, estado)
+if isinstance(resultado, str):
+    print(resultado)
+else:
+    print(f"O preço final do produto para o estado {estado} é R$ {resultado:.2f}.")

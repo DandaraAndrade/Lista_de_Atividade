@@ -1,0 +1,12 @@
+nota1 = float(input("Digite a nota da primeira prova: "))
+nota2 = float(input("Digite a nota da segunda prova: "))
+
+media_ponderada = (nota1 * 1 + nota2 * 2) / (1 + 2)
+
+if media_ponderada >= 7:
+    situacao = "aprovado"
+else:
+    situacao = "reprovado"
+
+# Exibe a média do aluno e sua situação
+print(f"A média do aluno correponde á media_ponderada {media_ponderada}. O que índica que foi {situacao}.")

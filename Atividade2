@@ -1,0 +1,8 @@
+import math 
+número = float(input("Dígite um número: "))
+
+if número >= 0:
+    raiz_quadrada = math.sqrt(número)
+    print("A raiz quadrada de", número, "é", raiz_quadrada)
+else:
+    print("Número inválido. O número deve ser positivo para o cálculo  da raiz quadrada.")
